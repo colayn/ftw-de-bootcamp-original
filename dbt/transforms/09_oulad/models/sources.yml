@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw
+    database: raw  # Explicitly specify ClickHouse database
+    tables:
+      - name: grp5_oulad___student_info
+      - name: grp5_oulad___student_assessment
+      - name: studentVle
+      - name: grp5_oulad___student_registration
+
+  - name: clean
+    database: clean   # ClickHouse schema/database
+    tables:
+      - name: grp5_stg_oulad_student_info
+      - name: grp5_stg_oulad_courses
+      - name: grp5_stg_oulad_studentVle
+      - name: grp5_stg_oulad_student_registration

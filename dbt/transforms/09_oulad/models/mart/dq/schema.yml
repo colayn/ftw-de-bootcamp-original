@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: grp5_dq_oulad_studentVle_summary
+    description: "DQ KPIs for studentVle: row counts, null percentages, and invalid module/presentation combinations."
+    columns:
+      - name: row_count_raw
+        description: "Total rows in the raw studentVle source table."
+      - name: row_count_clean
+        description: "Total rows in the clean studentVle staging table."
+      - name: dropped_rows
+        description: "Number of rows dropped between raw and clean tables."
+      - name: pct_null_id_student
+        description: "Percentage of rows where id_student is NULL in clean table."
+      - name: pct_null_sum_click
+        description: "Percentage of rows where sum_click is NULL in clean table."
+      - name: invalid_module_presentation
+        description: "Count of rows with invalid code_module/code_presentation combinations."
+
+  - name: grp5_dq_oulad_studentVle_anomalies
+    description: "Row-level drilldown of studentVle records violating DQ rules."
+    columns:
+      - name: code_module
+        description: "Module code for the VLE record."
+      - name: code_presentation
+        description: "Presentation code for the VLE record."
+      - name: id_student
+        description: "Student identifier; flagged if NULL."
+      - name: id_site
+        description: "Site identifier for the student."
+      - name: date
+        description: "Date of the VLE interaction."
+      - name: sum_click
+        description: "Total clicks by student; flagged if NULL."
+      - name: dq_issue
+        description: "The DQ issue found for this record. Possible values: 'null_id_student', 'null_sum_click', 'invalid_module_presentation'."
+
+  - name: grp5_dq_oulad_student_registration_summary
+    description: "DQ KPIs derived from clean OULAD model vs raw source (demo-friendly)."
+    columns:
+      - name: row_count_raw
+        description: "Total rows in raw source table"
+      - name: row_count_clean
+        description: "Total rows in clean model"
+      - name: dropped_rows
+        description: "raw minus clean (proxy for filtered rows)"
+      - name: pct_null_code_module
+        description: "% of rows with NULL code_module in clean"
+      - name: pct_null_code_presentation
+        description: "% of rows with NULL code_presentation in clean"
+      - name: pct_null_id_student
+        description: "% of rows with NULL id_student in clean"
+      - name: pct_null_date_registration
+        description: "% of rows with NULL date_registration in clean"
+      - name: invalid_code_module
+        description: "Rows where code_module not in {AAA,BBB,CCC,DDD,EEE,FFF,GGG}"
+      - name: invalid_code_presentation
+        description: "Rows where code_presentation not in {2013B, 2013J, 2014B, 2014J}"
+
+  - name: grp5_dq_oulad_student_registration_anomalies
+    description: "Row-level drilldown of records violating simple DQ rules."
