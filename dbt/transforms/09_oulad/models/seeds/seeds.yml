@@ -1,0 +1,11 @@
+version: 2
+
+seeds:
+  ex_09_oulad:   # <--- your actual dbt project name
+    allowed_module_presentations:
+      description: "List of valid module and presentation combinations for DQ checks"
+      columns:
+        module:
+          description: "Module code (e.g., AAA, BBB)"
+        presentation:
+          description: "Presentation code (e.g., 2013J, 2014B)"

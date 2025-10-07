@@ -10298,3 +10298,39 @@ EXCHANGE TABLES `clean`.`grp5_stg_oulad_student_info__dbt_backup` AND `clean`.`g
 [0m15:39:45.616695 [debug] [MainThread]: Command `dbt build` failed at 15:39:45.615731 after 28.67 seconds
 [0m15:39:45.618802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734214312e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73420daf9370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73420daf95b0>]}
 [0m15:39:45.621344 [debug] [MainThread]: Flushing usage events
+[0m09:59:13.568411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c93e9e0f310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c93e6a723d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c93e6a723a0>]}
+
+
+============================== 09:59:13.574400 | 1bf8861b-3e56-4314-8d5b-65657221b88b ==============================
+[0m09:59:13.574400 [info ] [MainThread]: Running with dbt=1.8.9
+[0m09:59:13.575070 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_format': 'default', 'partial_parse': 'True', 'no_print': 'None', 'warn_error': 'None', 'version_check': 'True', 'introspect': 'True', 'profiles_dir': '.', 'cache_selected_only': 'False', 'debug': 'False', 'empty': 'None', 'invocation_command': 'dbt seed --profiles-dir . --target remote', 'quiet': 'False', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'log_path': '/workdir/transforms/09_oulad/logs', 'indirect_selection': 'eager', 'target_path': 'None', 'fail_fast': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'write_json': 'True'}
+[0m09:59:13.736201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1bf8861b-3e56-4314-8d5b-65657221b88b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c93e6b72f10>]}
+[0m09:59:13.783330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1bf8861b-3e56-4314-8d5b-65657221b88b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c93e69a2df0>]}
+[0m09:59:13.784473 [info ] [MainThread]: Registered adapter: clickhouse=1.8.6
+[0m09:59:13.855934 [debug] [MainThread]: checksum: 265ce5244aff672775eaff93c261d21692ed3f5650f4d9e918c76acdb0e9479a, vars: {}, profile: , target: remote, version: 1.8.9
+[0m09:59:13.961422 [error] [MainThread]: Encountered an error:
+Parsing Error
+  The schema file at models/seeds/seeds.yml is invalid because the value of 'seeds' is not a list
+[0m09:59:13.962978 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 0.4364078, "process_in_blocks": "66144", "process_kernel_time": 0.854833, "process_mem_max_rss": "97708", "process_out_blocks": "6616", "process_user_time": 2.454341}
+[0m09:59:13.963550 [debug] [MainThread]: Command `dbt seed` failed at 09:59:13.963397 after 0.44 seconds
+[0m09:59:13.963995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c93e9e0f310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c93e625d0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c93e625d310>]}
+[0m09:59:13.964371 [debug] [MainThread]: Flushing usage events
+[0m09:59:14.649593 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m10:01:48.533852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c202053f310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c201d1a7340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c201d1a7490>]}
+
+
+============================== 10:01:48.539523 | c4de5f9f-c010-4790-8b5a-d18a67149e97 ==============================
+[0m10:01:48.539523 [info ] [MainThread]: Running with dbt=1.8.9
+[0m10:01:48.540171 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'use_colors': 'True', 'write_json': 'True', 'no_print': 'None', 'empty': 'None', 'target_path': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'partial_parse': 'True', 'debug': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_path': '/workdir/transforms/09_oulad/logs', 'static_parser': 'True', 'warn_error': 'None', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt seed --profiles-dir . --target remote', 'log_format': 'default', 'introspect': 'True', 'profiles_dir': '.', 'cache_selected_only': 'False'}
+[0m10:01:48.689686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c4de5f9f-c010-4790-8b5a-d18a67149e97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c201fad87c0>]}
+[0m10:01:48.733852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c4de5f9f-c010-4790-8b5a-d18a67149e97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c201d15a3d0>]}
+[0m10:01:48.734609 [info ] [MainThread]: Registered adapter: clickhouse=1.8.6
+[0m10:01:48.794759 [debug] [MainThread]: checksum: 265ce5244aff672775eaff93c261d21692ed3f5650f4d9e918c76acdb0e9479a, vars: {}, profile: , target: remote, version: 1.8.9
+[0m10:01:48.908024 [error] [MainThread]: Encountered an error:
+Parsing Error
+  The schema file at models/seeds/seeds.yml is invalid because the value of 'seeds' is not a list
+[0m10:01:48.908957 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 0.42703778, "process_in_blocks": "0", "process_kernel_time": 0.388097, "process_mem_max_rss": "97972", "process_out_blocks": "6608", "process_user_time": 2.036419}
+[0m10:01:48.909416 [debug] [MainThread]: Command `dbt seed` failed at 10:01:48.909296 after 0.43 seconds
+[0m10:01:48.909771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c202053f310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c201c983040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c201c9832b0>]}
+[0m10:01:48.910112 [debug] [MainThread]: Flushing usage events
+[0m10:01:49.526048 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
