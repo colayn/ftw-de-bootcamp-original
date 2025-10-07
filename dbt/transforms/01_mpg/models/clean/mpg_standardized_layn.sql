@@ -13,7 +13,7 @@ select
   toInt32(model_year)     as model_year,
   trim(origin)                  as origin,
   trim(name)                    as make
-from {{ source('raw', 'autompg___cars') }}
+from {{ source('raw', 'autompg___cars_layn') }}
 -- where horsepower is not null
   -- and isFinite(horsepower)
 

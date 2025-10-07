@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: mpg_standardized
-    description: "Standardized Auto MPG (typed + trimmed) loaded from raw.autompg___cars"
+  - name: mpg_standardized_layn
+    description: "Standardized Auto MPG (typed + trimmed) loaded from raw.autompg___cars_layn"
     columns:
       - name: mpg
         description: "Miles per gallon"

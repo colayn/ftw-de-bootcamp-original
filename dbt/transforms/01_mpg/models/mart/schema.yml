@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: cylinders_by_origin
+  - name: cylinders_by_origin_layn
     description: "Mart: average cylinders and row counts by origin"
     columns:
       - name: origin

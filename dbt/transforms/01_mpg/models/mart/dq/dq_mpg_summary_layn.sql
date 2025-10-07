@@ -1,14 +1,11 @@
 {{ config(materialized="view", schema="mart") }}
 
--- Inputs:
---   raw table:   raw.autompg___cars           (as loaded by dlt)
---   clean model: {{ ref('mpg_standardized') }} (typed/trimmed)
-
 with src as (
-  select * from {{ source('raw','autompg___cars') }}
+  select * from {{ source('raw','autompg___cars_layn') }}
 ),
+
 cln as (
-  select * from {{ ref('mpg_standardized') }}
+  select * from {{ source('clean','mpg_standardized_layn') }}
 ),
 
 counts as (

@@ -4,7 +4,7 @@
 -- LIMIT for demo-friendliness; remove in real pipelines.
 
 with cln as (
-  select * from {{ ref('mpg_standardized') }}
+  select * from {{ source('clean','mpg_standardized_layn') }}
 ),
 violations as (
   select

@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dq_mpg_summary
+  - name: dq_mpg_summary_layn
     description: "DQ KPIs derived from clean MPG model vs raw source (demo-friendly)."
     columns:
       - name: row_count_raw
@@ -27,5 +27,5 @@ models:
       - name: out_of_range_model_year
         description: "Rows where model_year not in [70..82]"
 
-  - name: dq_mpg_anomalies
+  - name: dq_mpg_anomalies_layn
     description: "Row-level drilldown of records violating simple DQ rules."
