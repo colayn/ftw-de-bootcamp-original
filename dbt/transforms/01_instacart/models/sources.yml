@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw  # Explicitly specify ClickHouse database
+    tables:
+      - name: raw___insta_orders     # Must match EXACTLY (3 underscores)
